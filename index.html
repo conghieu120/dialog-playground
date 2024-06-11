@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialog Playground</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    const onAlert = () => {
+      alert('Alert')
+    }
+    const onPrompt = () => {
+      prompt('Prompp', 'Default value')
+    }
+    const onConfirm = () => {
+      confirm('Confirm')
+    }
+  </script>
+</head>
+<body>
+  <div class="flex w-screen h-screen justify-center items-center text-white font-bold bg-amber-200">
+    <button id="alert" class="bg-green-500 ml-4 rounded-md p-4">
+      Alert
+    </button>
+    <button id="prompt" class="bg-green-500 ml-4 rounded-md p-4">
+      Prompt
+    </button>
+    <button id="confirm" class="bg-green-500 ml-4 rounded-md p-4">
+      Confirm
+    </button>
+  </div>
+  <div class="fixed bottom-10 w-full text-center text-blue-700 font-bold italic">
+    <a target="_blank" href="https://github.com/conghieu120">Made by: hieumc</a>
+  </div>
+</body>
+<script>
+    const alertElement = document.querySelector('#alert')
+    const promptElement = document.querySelector('#prompt')
+    const confirmElement = document.querySelector('#confirm')
+    alertElement.addEventListener('click', function () {
+      onAlert()
+    })
+    promptElement.addEventListener('click', function () {
+      onPrompt()
+    })
+    confirmElement.addEventListener('click', function () {
+      onConfirm()
+    })
+</script>
+</html>
